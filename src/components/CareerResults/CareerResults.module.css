@@ -1,0 +1,184 @@
+.resultsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.header h2 {
+  color: var(--color-neutral-800);
+  margin-bottom: var(--space-2);
+}
+
+.header p {
+  color: var(--color-neutral-600);
+  font-size: var(--font-size-lg);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.careersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--space-6);
+}
+
+.careerCard {
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-neutral-200);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.careerCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: white;
+}
+
+.careerRank {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+}
+
+.saveButton {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+  color: white;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.saveButton:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.careerInfo {
+  padding: var(--space-4);
+}
+
+.careerInfo h3 {
+  margin: 0 0 var(--space-2) 0;
+  color: var(--color-neutral-800);
+}
+
+.description {
+  margin: 0;
+  color: var(--color-neutral-600);
+  line-height: var(--line-height-relaxed);
+}
+
+.metrics {
+  padding: 0 var(--space-4);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  background-color: var(--color-neutral-50);
+  border-radius: var(--radius-md);
+}
+
+.metricIcon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.metricLabel {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--color-neutral-500);
+  font-weight: var(--font-weight-medium);
+}
+
+.metricValue {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-700);
+  font-weight: var(--font-weight-medium);
+}
+
+.outlookHigh { color: var(--color-success); }
+.outlookMedium { color: var(--color-warning); }
+.outlookLow { color: var(--color-error); }
+
+.industryTrend {
+  padding: var(--space-4);
+  background-color: var(--color-neutral-50);
+  border-top: 1px solid var(--color-neutral-200);
+}
+
+.industryTrend h4 {
+  margin: 0 0 var(--space-2) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-700);
+}
+
+.industryTrend p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+  line-height: var(--line-height-relaxed);
+}
+
+.confidence {
+  padding: var(--space-4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.confidenceLabel {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-700);
+}
+
+.cardActions {
+  padding: var(--space-4);
+  display: flex;
+  gap: var(--space-2);
+  border-top: 1px solid var(--color-neutral-200);
+}
+
+.cardActions .btn {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .careersGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cardActions {
+    flex-direction: column;
+  }
+  
+  .metrics {
+    gap: var(--space-2);
+  }
+}

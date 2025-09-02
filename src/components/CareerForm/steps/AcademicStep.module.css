@@ -1,0 +1,60 @@
+.academicStep {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.intro h3 {
+  color: var(--color-neutral-800);
+  margin-bottom: var(--space-2);
+}
+
+.intro p {
+  color: var(--color-neutral-600);
+  font-size: var(--font-size-sm);
+}
+
+.formGrid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.subjectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-3);
+}
+
+.subjectCard {
+  padding: var(--space-3);
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-md);
+  background: var(--color-neutral-50);
+  transition: all var(--transition-fast);
+}
+
+.subjectCard:hover {
+  border-color: var(--color-primary);
+  background: white;
+}
+
+.subjectHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.subjectIcon {
+  font-size: var(--font-size-lg);
+}
+
+@media (max-width: 768px) {
+  .subjectsGrid {
+    grid-template-columns: 1fr;
+  }
+}

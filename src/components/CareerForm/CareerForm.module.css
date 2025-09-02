@@ -1,0 +1,89 @@
+.formContainer {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.formCard {
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.header {
+  padding: var(--space-6);
+  border-bottom: 1px solid var(--color-neutral-200);
+  background: linear-gradient(135deg, var(--color-neutral-50) 0%, white 100%);
+}
+
+.stepInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.stepIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-lg);
+}
+
+.stepInfo h2 {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+}
+
+.stepInfo p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-500);
+}
+
+.stepContent {
+  padding: var(--space-6);
+  min-height: 400px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  background-color: var(--color-neutral-50);
+  border-top: 1px solid var(--color-neutral-200);
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    padding: var(--space-2);
+  }
+  
+  .header {
+    padding: var(--space-4);
+  }
+  
+  .stepContent {
+    padding: var(--space-4);
+    min-height: 300px;
+  }
+  
+  .navigation {
+    padding: var(--space-3) var(--space-4);
+  }
+  
+  .stepInfo {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-2);
+  }
+}

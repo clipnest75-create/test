@@ -1,0 +1,104 @@
+:root {
+  --color-confidence-high: var(--color-success);
+  --color-confidence-medium: var(--color-warning);
+  --color-confidence-low: var(--color-error);
+}
+
+.confidenceMeter {
+  display: inline-block;
+}
+
+.meterContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.meterSvg {
+  transform: rotate(0deg);
+}
+
+.progressCircle {
+  transition: stroke-dashoffset var(--transition-slow);
+}
+
+.meterValue {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.percentage {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-800);
+}
+
+.label {
+  display: block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.label.high {
+  color: var(--color-confidence-high);
+}
+
+.label.medium {
+  color: var(--color-confidence-medium);
+}
+
+.label.low {
+  color: var(--color-confidence-low);
+}
+
+/* Size variants */
+.small {
+  width: 60px;
+  height: 60px;
+}
+
+.small .meterSvg {
+  width: 60px;
+  height: 60px;
+}
+
+.small .percentage {
+  font-size: var(--font-size-sm);
+}
+
+.small .label {
+  font-size: 10px;
+}
+
+.medium {
+  width: 80px;
+  height: 80px;
+}
+
+.medium .meterSvg {
+  width: 80px;
+  height: 80px;
+}
+
+.medium .percentage {
+  font-size: var(--font-size-base);
+}
+
+.large {
+  width: 100px;
+  height: 100px;
+}
+
+.large .meterSvg {
+  width: 100px;
+  height: 100px;
+}
+
+.large .percentage {
+  font-size: var(--font-size-lg);
+}

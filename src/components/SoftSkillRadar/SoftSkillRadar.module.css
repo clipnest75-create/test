@@ -1,0 +1,228 @@
+.radarContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.header h2 {
+  color: var(--color-neutral-800);
+  margin-bottom: var(--space-2);
+}
+
+.header p {
+  color: var(--color-neutral-600);
+  font-size: var(--font-size-lg);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.chartSection {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-neutral-200);
+}
+
+.chartContainer {
+  margin-bottom: var(--space-4);
+}
+
+.skillsLegend {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.legendItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2);
+  background-color: var(--color-neutral-50);
+  border-radius: var(--radius-md);
+}
+
+.skillName {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-700);
+}
+
+.skillRating {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.skillValue {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-800);
+}
+
+.skillLevel {
+  font-size: var(--font-size-xs);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.skillLevel.strong {
+  background-color: rgb(34 197 94 / 0.1);
+  color: var(--color-success);
+}
+
+.skillLevel.good {
+  background-color: rgb(37 99 235 / 0.1);
+  color: var(--color-primary);
+}
+
+.skillLevel.fair {
+  background-color: rgb(245 158 11 / 0.1);
+  color: var(--color-warning);
+}
+
+.skillLevel.developing {
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-600);
+}
+
+.recommendationsSection {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.improvementAreas {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-neutral-200);
+}
+
+.improvementAreas h3 {
+  margin: 0 0 var(--space-3) 0;
+  color: var(--color-neutral-800);
+  font-size: var(--font-size-lg);
+}
+
+.improvementList {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.improvementItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2);
+  background-color: rgb(245 158 11 / 0.05);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-warning);
+}
+
+.improvementSkill {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-neutral-700);
+}
+
+.improvementScore {
+  font-size: var(--font-size-sm);
+  color: var(--color-warning);
+  font-weight: var(--font-weight-medium);
+}
+
+.coursesSection {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-neutral-200);
+}
+
+.coursesSection h3 {
+  margin: 0 0 var(--space-3) 0;
+  color: var(--color-neutral-800);
+  font-size: var(--font-size-lg);
+}
+
+.coursesGrid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.courseCard {
+  padding: var(--space-3);
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-md);
+  background: var(--color-neutral-50);
+  transition: all var(--transition-fast);
+}
+
+.courseCard:hover {
+  border-color: var(--color-primary);
+  background: white;
+  transform: translateY(-1px);
+}
+
+.courseHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.courseLogo {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.courseHeader h4 {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-800);
+}
+
+.courseProvider {
+  font-size: var(--font-size-xs);
+  color: var(--color-neutral-500);
+}
+
+.courseDescription {
+  margin: 0 0 var(--space-2) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+  line-height: var(--line-height-relaxed);
+}
+
+.courseFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.courseDuration {
+  font-size: var(--font-size-xs);
+  color: var(--color-neutral-500);
+  font-weight: var(--font-weight-medium);
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+  
+  .pathwayDetails {
+    grid-template-columns: 1fr;
+  }
+}
